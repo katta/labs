@@ -11,6 +11,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="utils" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:r09" level="project" />
   </component>
 </module>
 
