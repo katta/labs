@@ -30,6 +30,12 @@
             <version>3.8.0.GA</version>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.jgeppert.struts2.jquery</groupId>
+            <artifactId>struts2-jquery-plugin</artifactId>
+            <version>3.1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <finalName>struts2</finalName>
