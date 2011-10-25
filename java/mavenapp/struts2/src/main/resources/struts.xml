@@ -14,9 +14,6 @@
 
         <action name="emailAction" method="emailAddresses" class="org.katta.labs.struts2.action.EmailAction">
             <result type="json">
-                <param name="root">
-                    emails
-                </param>
             </result>
         </action>
     </package>
