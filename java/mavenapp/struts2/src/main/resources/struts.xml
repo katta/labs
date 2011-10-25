@@ -7,9 +7,17 @@
 
     <constant name="struts.devMode" value="true"/>
 
-    <package name="struts2webapp" extends="struts-default">
+    <package name="struts2webapp" extends="json-default">
         <action name="index">
             <result>/index.jsp</result>
+        </action>
+
+        <action name="emailAction" method="emailAddresses" class="org.katta.labs.struts2.action.EmailAction">
+            <result type="json">
+                <param name="root">
+                    emails
+                </param>
+            </result>
         </action>
     </package>
 
