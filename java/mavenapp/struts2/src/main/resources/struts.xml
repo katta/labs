@@ -8,8 +8,13 @@
     <constant name="struts.devMode" value="true"/>
 
     <package name="struts2webapp" extends="json-default">
-        <action name="index">
-            <result>/index.jsp</result>
+
+        <action name="div">
+            <result>/jquery_div.jsp</result>
+        </action>
+
+        <action name="addressform" method="show" class="org.katta.labs.struts2.action.AddressAction">
+            <result name="show_address_form">/jquery_select.jsp</result>
         </action>
 
         <action name="emailAction" method="emailAddresses" class="org.katta.labs.struts2.action.EmailAction">
