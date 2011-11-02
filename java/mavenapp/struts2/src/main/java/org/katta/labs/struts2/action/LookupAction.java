@@ -1,20 +1,27 @@
 package org.katta.labs.struts2.action;
 
-import com.opensymphony.xwork2.Action;
 import com.opensymphony.xwork2.ActionSupport;
 import org.katta.labs.struts2.model.EmailAddress;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class EmailAction extends ActionSupport {
+public class LookupAction extends ActionSupport {
     private List<EmailAddress> emails = new ArrayList<EmailAddress>();
-    private List<String> somejunk = new ArrayList<String>();
+    private List<String> departments = new ArrayList<String>();
 
     public String emailAddresses() {
         addEmail("katta@bt.com");
-        somejunk.add("blaaa");
-        return Action.SUCCESS;
+        return SUCCESS;
+    }
+
+    public String departments() throws Exception {
+
+        departments.add("Sales");
+        departments.add("Marketing");
+        departments.add("Engineering");
+
+        return SUCCESS;
     }
 
     private void addEmail(String email) {
@@ -29,11 +36,11 @@ public class EmailAction extends ActionSupport {
         this.emails = emails;
     }
 
-    public List<String> getSomejunk() {
-        return somejunk;
+    public List<String> getDepartments() {
+        return departments;
     }
 
-    public void setSomejunk(List<String> somejunk) {
-        this.somejunk = somejunk;
+    public void setDepartments(List<String> departments) {
+        this.departments = departments;
     }
 }

@@ -3,7 +3,7 @@
 
 <html>
     <head>
-        <sj:head/>
+        <sj:head jqueryui="true"/>
 
         <script type="text/javascript">
             function loadDiv() {

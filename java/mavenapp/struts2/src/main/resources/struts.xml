@@ -17,7 +17,12 @@
             <result name="show_address_form">/jquery_select.jsp</result>
         </action>
 
-        <action name="emailAction" method="emailAddresses" class="org.katta.labs.struts2.action.EmailAction">
+        <action name="emailLookupAction" method="emailAddresses" class="org.katta.labs.struts2.action.LookupAction">
+            <result type="json">
+            </result>
+        </action>
+
+        <action name="departmentLookupAction" method="departments" class="org.katta.labs.struts2.action.LookupAction">
             <result type="json">
             </result>
         </action>
