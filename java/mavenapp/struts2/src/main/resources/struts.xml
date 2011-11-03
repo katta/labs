@@ -17,6 +17,17 @@
             <result name="show_address_form">/jquery_select.jsp</result>
         </action>
 
+        <action name="address" method="show" class="org.katta.labs.struts2.action.AddressAction">
+            <result name="show_address_form">/address_form.jsp</result>
+        </action>
+
+        <action name="saveAddress" method="save" class="org.katta.labs.struts2.action.AddressAction">
+            <result name="success">/address_form.jsp</result>
+            <result name="input">/address_form.jsp</result>
+        </action>
+
+
+
         <action name="emailLookupAction" method="emailAddresses" class="org.katta.labs.struts2.action.LookupAction">
             <result type="json">
             </result>
