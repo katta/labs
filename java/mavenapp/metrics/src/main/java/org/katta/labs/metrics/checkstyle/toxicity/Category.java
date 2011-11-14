@@ -10,6 +10,13 @@ public class Category {
     @XmlAttribute(name = "check")
     private String check;
 
+    @XmlAttribute(name = "threshold")
+    private int threshold;
+
+    public int getThreshold() {
+        return threshold;
+    }
+
     public String getCheck() {
         return check;
     }
