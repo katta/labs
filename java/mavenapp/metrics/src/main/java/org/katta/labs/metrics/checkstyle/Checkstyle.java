@@ -10,16 +10,16 @@ import java.util.List;
 public class Checkstyle {
 
     @XmlElement(name = "file")
-    protected List<File> files;
+    protected List<CheckstyleFile> checkstyleFiles;
 
     @XmlAttribute
     protected String version;
 
-    public List<File> getFiles() {
-        if (files == null) {
-            files = new ArrayList<File>();
+    public List<CheckstyleFile> getFiles() {
+        if (checkstyleFiles == null) {
+            checkstyleFiles = new ArrayList<CheckstyleFile>();
         }
-        return this.files;
+        return this.checkstyleFiles;
     }
 
     public String getVersion() {
@@ -30,4 +30,12 @@ public class Checkstyle {
         this.version = value;
     }
 
+    public List<Error> findErrorsOfType(String check) {
+        ArrayList<Error> errors = new ArrayList<Error>();
+
+        for (CheckstyleFile file : checkstyleFiles) {
+            errors.addAll(file.getErrorsOfType(check));
+        }
+        return errors;
+    }
 }

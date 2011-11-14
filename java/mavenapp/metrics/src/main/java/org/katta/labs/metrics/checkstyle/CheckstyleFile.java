@@ -2,11 +2,12 @@ package org.katta.labs.metrics.checkstyle;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
-public class File {
+public class CheckstyleFile {
 
     @XmlElement(name = "error")
     protected List<Error> errors;
@@ -29,4 +30,14 @@ public class File {
         this.name = value;
     }
 
+    public Collection<? extends Error> getErrorsOfType(String check) {
+        ArrayList<Error> filteredErrors = new ArrayList<Error>();
+
+        for (Error error : errors) {
+            if(error.getSource().endsWith(check+"Check")) {
+                filteredErrors.add(error);
+            }
+        }
+        return filteredErrors;
+    }
 }

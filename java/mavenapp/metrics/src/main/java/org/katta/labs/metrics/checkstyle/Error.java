@@ -1,10 +1,6 @@
 package org.katta.labs.metrics.checkstyle;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import javax.xml.bind.annotation.*;
 
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -74,4 +70,15 @@ public class Error {
         this.column = value;
     }
 
+    @Override
+    public String toString() {
+        return "Error{" +
+                "value='" + value + '\'' +
+                ", line='" + line + '\'' +
+                ", severity='" + severity + '\'' +
+                ", message='" + message + '\'' +
+                ", source='" + source + '\'' +
+                ", column='" + column + '\'' +
+                '}';
+    }
 }

@@ -19,15 +19,15 @@
 
         <property name="cacheFile" value="${checkstyle.cache.file}"/>
 
-        <module name="ClassFanOutComplexityCheck">
+        <module name="ClassFanOutComplexity">
             <property name="max" value="30" />
         </module>
 
-        <module name="ClassDataAbstractionCouplingCheck">
+        <module name="ClassDataAbstractionCoupling">
             <property name="max" value="10" />
         </module>
 
-        <module name="AnonInnerLengthCheck">
+        <module name="AnonInnerLength">
             <property name="max" value="35" />
         </module>
 
@@ -35,27 +35,27 @@
             <property name="max" value="30" />
         </module>
 
-        <module name="ParameterNumberCheck">
+        <module name="ParameterNumber">
             <property name="max" value="6" />
         </module>
 
-        <module name="CyclomaticComplexityCheck">
+        <module name="CyclomaticComplexity">
             <property name="max" value="10" />
         </module>
 
-        <module name="NestedIfDepthCheck">
+        <module name="NestedIfDepth">
             <property name="max" value="3" />
         </module>
 
-        <module name="NestedTryDepthCheck">
+        <module name="NestedTryDepth">
             <property name="max" value="2" />
         </module>
 
-        <module name="BooleanExpressionComplexityCheck">
+        <module name="BooleanExpressionComplexity">
             <property name="max" value="3" />
         </module>
 
-        <module name="MissingSwitchDefaultCheck">
+        <module name="MissingSwitchDefault">
         </module>
 
     </module>
