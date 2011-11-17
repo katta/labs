@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle.toxicity;
+package org.katta.labs.metrics.checkstyle.domain.toxicity;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

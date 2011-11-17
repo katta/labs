@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle;
+package org.katta.labs.metrics.checkstyle.domain;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
