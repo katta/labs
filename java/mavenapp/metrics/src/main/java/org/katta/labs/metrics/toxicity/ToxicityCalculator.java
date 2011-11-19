@@ -3,18 +3,37 @@ package org.katta.labs.metrics.toxicity;
 import org.katta.labs.metrics.toxicity.domain.Checkstyle;
 import org.katta.labs.metrics.toxicity.domain.Toxicity;
 import org.katta.labs.metrics.toxicity.util.JAXBUtil;
+import org.katta.labs.metrics.toxicity.util.StringUtil;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class ToxicityCalculator {
 
-    public void calculate(String checkstyleFilePath, String toxicityFilePath) {
+    public void calculate(String checkstyleFilePath) {
         Checkstyle checkstyle = loadCheckstyle(checkstyleFilePath);
-        Toxicity toxicity = loadToxicity(toxicityFilePath);
 
         Map<String, Map<String, Double>> value = checkstyle.getFiles().toxicValue();
+        toCsv(value);
 
-        System.out.println(value);
+    }
+
+    private void toCsv(Map<String, Map<String, Double>> toxicValues) {
+
+        Checks checks = Checks.all();
+        System.out.println("FileName, " + checks.toCSV());
+
+        for (String file : toxicValues.keySet()) {
+            List<String> values = new ArrayList<String>();
+            values.add(file);
+
+            for (Check check : checks) {
+                values.add(toxicValues.get(file).get(check.getName()).toString());
+            }
+            System.out.println(StringUtil.join(",", values));
+        }
+
     }
 
     private Checkstyle loadCheckstyle(String filePath) {

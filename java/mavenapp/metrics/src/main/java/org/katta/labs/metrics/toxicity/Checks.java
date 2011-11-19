@@ -1,11 +1,9 @@
 package org.katta.labs.metrics.toxicity;
 
 import org.katta.labs.metrics.toxicity.domain.CheckstyleFile;
+import org.katta.labs.metrics.toxicity.util.StringUtil;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashMap;
+import java.util.*;
 
 public class Checks extends ArrayList<Check> {
 
@@ -35,5 +33,18 @@ public class Checks extends ArrayList<Check> {
             checkValues.put(check.getName(), check.toxicValue(checkstyleFile));
         }
         return checkValues;
+    }
+
+
+    public List<String> names() {
+        ArrayList<String> names = new ArrayList<String>();
+        for (Check check : this) {
+            names.add(check.getName());
+        }
+        return names;
+    }
+
+    public String toCSV() {
+        return StringUtil.join(",", names());
     }
 }

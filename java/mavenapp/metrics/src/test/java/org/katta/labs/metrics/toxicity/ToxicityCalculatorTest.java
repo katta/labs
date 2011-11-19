@@ -9,8 +9,7 @@ public class ToxicityCalculatorTest {
 
         ToxicityCalculator loader = new ToxicityCalculator();
         String checkstyleFilePath = this.getClass().getClassLoader().getResource("checkstyle.xml").getPath();
-        String toxicityFilePath = this.getClass().getClassLoader().getResource("toxicity.xml").getPath();
 
-        loader.calculate(checkstyleFilePath, toxicityFilePath);
+        loader.calculate(checkstyleFilePath);
     }
 }
