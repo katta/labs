@@ -100,5 +100,15 @@ public class SomeClass {
         }
 
 
+        int no = 0;
+        switch (no) {
+            case 1 :
+                System.out.println("this is one");
+                break;
+            case 2:
+                System.out.println("this is two");
+                break;
+        }
+
     }
 }
