@@ -44,6 +44,7 @@
 <error line="39" column="5" severity="error" message="Method length is 7 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/check/MethodLengthCheck.java">
+<error line="14" column="5" severity="error" message="Method length is 12 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/check/ParameterNumberCheck.java">
 </file>
@@ -70,6 +71,10 @@
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/domain/Toxicity.java">
 <error line="17" column="5" severity="error" message="Method length is 6 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
+<file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/todelete/SomeClass.java">
+<error line="5" column="5" severity="error" message="Method length is 15 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="12" column="21" severity="error" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
+</file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/ToxicityCalculator.java">
 <error line="16" column="5" severity="error" message="Method length is 7 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 <error line="24" column="5" severity="error" message="Method length is 16 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
@@ -78,6 +83,7 @@
 <error line="9" column="5" severity="error" message="Method length is 13 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/util/StringUtil.java">
-<error line="7" column="5" severity="error" message="Method length is 9 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="11" column="5" severity="error" message="Method length is 9 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="21" column="5" severity="error" message="Method length is 19 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 </checkstyle>

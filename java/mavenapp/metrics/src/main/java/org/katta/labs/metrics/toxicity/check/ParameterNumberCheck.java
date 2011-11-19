@@ -11,4 +11,9 @@ public class ParameterNumberCheck extends Check {
         return errors.size();
     }
 
+    @Override
+    protected String getErrorFormat() {
+        throw new RuntimeException("This check should override parameter number check");
+    }
+
 }
