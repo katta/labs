@@ -35,7 +35,7 @@ public class CheckstyleFile {
     public Collection<? extends CheckstyleError> getErrorsOfType(String check) {
         ArrayList<CheckstyleError> filteredCheckstyleErrors = new ArrayList<CheckstyleError>();
 
-        for (CheckstyleError checkstyleError : checkstyleErrors) {
+        for (CheckstyleError checkstyleError : getCheckstyleErrors()) {
             if(checkstyleError.getSource().endsWith(check+"Check")) {
                 filteredCheckstyleErrors.add(checkstyleError);
             }
@@ -50,7 +50,7 @@ public class CheckstyleFile {
     public CheckstyleErrors errorsOfType(String checkName) {
         CheckstyleErrors errors = new CheckstyleErrors();
 
-        for (CheckstyleError error : checkstyleErrors) {
+        for (CheckstyleError error : getCheckstyleErrors()) {
             if(error.getSource().endsWith(checkName)) {
                 errors.add(error);
             }
@@ -61,7 +61,7 @@ public class CheckstyleFile {
     @Override
     public String toString() {
         return "CheckstyleFile{" +
-                "checkstyleErrors=" + checkstyleErrors +
+                "checkstyleErrors=" + getCheckstyleErrors() +
                 ", name='" + name + '\'' +
                 '}';
     }

@@ -1,6 +1,6 @@
 package org.katta.labs.metrics.toxicity.domain;
 
-import org.katta.labs.metrics.toxicity.Checks;
+import org.katta.labs.metrics.toxicity.check.Checks;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.toxicity;
+package org.katta.labs.metrics.toxicity.check;
 
 import org.katta.labs.metrics.toxicity.domain.CheckstyleFile;
 import org.katta.labs.metrics.toxicity.util.StringUtil;
@@ -23,7 +23,7 @@ public class Checks extends ArrayList<Check> {
     }
 
     public static Checks all() {
-        return new Checks(new ParameterNumberCheck());
+        return new Checks(new ParameterNumberCheck(), new MethodLengthCheck());
     }
 
     public HashMap<String, Double> toxicValue(CheckstyleFile checkstyleFile) {

@@ -1,5 +1,7 @@
 package org.katta.labs.metrics.toxicity;
 
+import org.katta.labs.metrics.toxicity.check.Check;
+import org.katta.labs.metrics.toxicity.check.Checks;
 import org.katta.labs.metrics.toxicity.domain.Checkstyle;
 import org.katta.labs.metrics.toxicity.domain.Toxicity;
 import org.katta.labs.metrics.toxicity.util.JAXBUtil;

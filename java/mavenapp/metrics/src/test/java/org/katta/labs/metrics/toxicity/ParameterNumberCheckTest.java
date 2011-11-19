@@ -3,6 +3,7 @@ package org.katta.labs.metrics.toxicity;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.katta.labs.metrics.toxicity.check.ParameterNumberCheck;
 import org.katta.labs.metrics.toxicity.domain.CheckstyleError;
 import org.katta.labs.metrics.toxicity.domain.CheckstyleFile;
 
