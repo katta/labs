@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle.domain;
+package org.katta.labs.metrics.toxicity.domain;
 
 import javax.xml.bind.annotation.*;
 
@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.*;
 @XmlType(name = "errorType", propOrder = {
     "value"
 })
-public class Error {
+public class CheckstyleError {
 
     @XmlValue
     protected String value;

@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle.domain;
+package org.katta.labs.metrics.toxicity.domain;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
@@ -10,14 +10,14 @@ import java.util.List;
 public class Checkstyle {
 
     @XmlElement(name = "file")
-    protected List<CheckstyleFile> checkstyleFiles;
+    protected CheckstyleFiles checkstyleFiles;
 
     @XmlAttribute
     protected String version;
 
-    public List<CheckstyleFile> getFiles() {
+    public CheckstyleFiles getFiles() {
         if (checkstyleFiles == null) {
-            checkstyleFiles = new ArrayList<CheckstyleFile>();
+            checkstyleFiles = new CheckstyleFiles();
         }
         return this.checkstyleFiles;
     }
@@ -30,12 +30,12 @@ public class Checkstyle {
         this.version = value;
     }
 
-    public List<Error> findErrorsOfType(String check) {
-        ArrayList<Error> errors = new ArrayList<Error>();
+    public List<CheckstyleError> findErrorsOfType(String check) {
+        ArrayList<CheckstyleError> checkstyleErrors = new ArrayList<CheckstyleError>();
 
         for (CheckstyleFile file : checkstyleFiles) {
-            errors.addAll(file.getErrorsOfType(check));
+            checkstyleErrors.addAll(file.getErrorsOfType(check));
         }
-        return errors;
+        return checkstyleErrors;
     }
 }

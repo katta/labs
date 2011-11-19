@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle.util;
+package org.katta.labs.metrics.toxicity.util;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;

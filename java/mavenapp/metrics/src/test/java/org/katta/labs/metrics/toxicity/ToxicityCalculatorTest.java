@@ -1,4 +1,4 @@
-package org.katta.labs.metrics.checkstyle;
+package org.katta.labs.metrics.toxicity;
 
 import org.junit.Test;
 
