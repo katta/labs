@@ -27,7 +27,8 @@ public class Checks extends ArrayList<Check> {
                 new NestedIfDepthCheck(), new NestedTryDepthCheck(),
                 new FileLengthCheck(), new MissingSwitchDefaultCheck(),
                 new CyclomaticComplexityCheck(), new ClassDataAbstractionCouplingCheck(),
-                new AnonInnerLengthCheck(), new ClassFanOutComplexityCheck());
+                new AnonInnerLengthCheck(), new ClassFanOutComplexityCheck(),
+                new BooleanExpressionComplexityCheck());
     }
 
     public HashMap<String, Double> toxicValue(CheckstyleFile checkstyleFile) {
