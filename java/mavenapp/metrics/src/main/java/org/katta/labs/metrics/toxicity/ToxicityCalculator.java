@@ -15,16 +15,17 @@ public class ToxicityCalculator {
 
     public void calculate(String checkstyleFilePath) {
         Checkstyle checkstyle = loadCheckstyle(checkstyleFilePath);
-
         Map<String, Map<String, Double>> value = checkstyle.getFiles().toxicValue();
-        toCsv(value);
+        System.out.println(toCsv(value));
 
     }
 
-    private void toCsv(Map<String, Map<String, Double>> toxicValues) {
+    private String toCsv(Map<String, Map<String, Double>> toxicValues) {
+
+        StringBuilder csv = new StringBuilder();
 
         Checks checks = Checks.all();
-        System.out.println("FileName, " + checks.toCSV());
+        csv.append("FileName, " + checks.toCSV() + "\n");
 
         for (String file : toxicValues.keySet()) {
             List<String> values = new ArrayList<String>();
@@ -33,16 +34,17 @@ public class ToxicityCalculator {
             for (Check check : checks) {
                 values.add(toxicValues.get(file).get(check.getName()).toString());
             }
-            System.out.println(StringUtil.join(",", values));
+            csv.append(StringUtil.join(",", values) + "\n");
         }
+        return csv.toString();
 
     }
 
     private Checkstyle loadCheckstyle(String filePath) {
-        return  JAXBUtil.load(Checkstyle.class, filePath);
+        return JAXBUtil.load(Checkstyle.class, filePath);
     }
 
     private Toxicity loadToxicity(String toxicityFilePath) {
-        return  JAXBUtil.load(Toxicity.class, toxicityFilePath);
+        return JAXBUtil.load(Toxicity.class, toxicityFilePath);
     }
 }
