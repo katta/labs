@@ -10,7 +10,8 @@ public class StringUtilTest {
     @Test
     public void shouldCollectTokens() {
 
-        Map<String, String> map = StringUtil.collectParams("Method length is %{actual} lines (max allowed is %{limit}).", "Method length is 6 lines (max allowed is 5).");
-        Assert.assertEquals("6", map.get("actual"));
+        Map<String, String> map = StringUtil.collectParams("Class Data Abstraction Coupling is 11 (max allowed is 10) classes .*",
+                "Class Data Abstraction Coupling is 11 (max allowed is 10) classes [APIException, ArdenBaseLexer, ArdenBaseParser, ArdenBaseTreeParser, ByteArrayInputStream, Date, File, FileInputStream, FileOutputStream, MLMObject, OutputStreamWriter].");
+        Assert.assertEquals("11", map.get("actual"));
     }
 }

@@ -25,7 +25,7 @@ public class ToxicityCalculator {
         StringBuilder csv = new StringBuilder();
 
         Checks checks = Checks.all();
-        csv.append("FileName, " + checks.toCSV() + "\n");
+        csv.append("FileName,").append(checks.toCSV()).append("\n");
 
         for (String file : toxicValues.keySet()) {
             List<String> values = new ArrayList<String>();
@@ -34,7 +34,7 @@ public class ToxicityCalculator {
             for (Check check : checks) {
                 values.add(toxicValues.get(file).get(check.getName()).toString());
             }
-            csv.append(StringUtil.join(",", values) + "\n");
+            csv.append(StringUtil.join(",", values)).append("\n");
         }
         return csv.toString();
 

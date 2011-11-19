@@ -16,7 +16,7 @@ public abstract class Check {
 
         for (CheckstyleError error : errors) {
             Map<String, String> linesMap = StringUtil.collectParams(getErrorFormat(), error.getMessage());
-            value += new Double(linesMap.get("actual")) / new Double(linesMap.get("limit"));
+            value += new Double(linesMap.get("actual").replaceAll(",", "")) / new Double(linesMap.get("limit").replaceAll(",", ""));
         }
 
         return value;

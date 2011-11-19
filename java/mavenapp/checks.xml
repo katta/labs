@@ -4,7 +4,7 @@
     "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 
 <!--
-    Use -Dcheckstyle.config.location=checks.xml to override this
+    Use -Dcheckstyle.config.location=checks.xml to override with this
 -->
 
 <module name="Checker">
