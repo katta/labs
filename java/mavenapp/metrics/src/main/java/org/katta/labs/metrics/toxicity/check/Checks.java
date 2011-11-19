@@ -23,7 +23,9 @@ public class Checks extends ArrayList<Check> {
     }
 
     public static Checks all() {
-        return new Checks(new ParameterNumberCheck(), new MethodLengthCheck(), new NestedIfDepthCheck(), new NestedTryDepthCheck());
+        return new Checks(new ParameterNumberCheck(), new MethodLengthCheck(),
+                new NestedIfDepthCheck(), new NestedTryDepthCheck(),
+                new FileLengthCheck());
     }
 
     public HashMap<String, Double> toxicValue(CheckstyleFile checkstyleFile) {

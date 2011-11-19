@@ -44,6 +44,8 @@
 <error line="29" column="5" severity="error" message="Method length is 8 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 <error line="39" column="5" severity="error" message="Method length is 7 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
+<file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/check/FileLengthCheck.java">
+</file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/check/MethodLengthCheck.java">
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/check/NestedIfDepthCheck.java">
@@ -59,11 +61,13 @@
 <error line="33" column="5" severity="error" message="Method length is 8 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/domain/CheckstyleError.java">
+<error line="1" severity="error" message="File length is 84 lines (max allowed is 50)." source="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck"/>
 <error line="73" column="5" severity="error" message="Method length is 10 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/domain/CheckstyleErrors.java">
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/domain/CheckstyleFile.java">
+<error line="1" severity="error" message="File length is 68 lines (max allowed is 50)." source="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck"/>
 <error line="20" column="5" severity="error" message="Method length is 6 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 <error line="35" column="5" severity="error" message="Method length is 10 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 <error line="50" column="5" severity="error" message="Method length is 10 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
@@ -76,11 +80,17 @@
 <error line="17" column="5" severity="error" message="Method length is 6 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/todelete/SomeClass.java">
+<error line="1" severity="error" message="File length is 104 lines (max allowed is 50)." source="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck"/>
 <error line="5" column="5" severity="error" message="Method length is 15 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
 <error line="12" column="21" severity="error" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
-<error line="21" column="5" severity="error" message="Method length is 33 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
-<error line="28" column="21" severity="error" message="Nested try depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
-<error line="29" column="25" severity="error" message="Nested try depth is 4 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
+<error line="21" column="5" severity="error" message="Method length is 15 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="28" column="21" severity="error" message="Nested if-else depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedIfDepthCheck"/>
+<error line="37" column="5" severity="error" message="Method length is 33 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="44" column="21" severity="error" message="Nested try depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
+<error line="45" column="25" severity="error" message="Nested try depth is 4 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
+<error line="71" column="5" severity="error" message="Method length is 33 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>
+<error line="78" column="21" severity="error" message="Nested try depth is 3 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
+<error line="79" column="25" severity="error" message="Nested try depth is 4 (max allowed is 2)." source="com.puppycrawl.tools.checkstyle.checks.coding.NestedTryDepthCheck"/>
 </file>
 <file name="/Users/srivatsa/workspace/labs/java/mavenapp/metrics/src/main/java/org/katta/labs/metrics/toxicity/ToxicityCalculator.java">
 <error line="16" column="5" severity="error" message="Method length is 7 lines (max allowed is 5)." source="com.puppycrawl.tools.checkstyle.checks.sizes.MethodLengthCheck"/>

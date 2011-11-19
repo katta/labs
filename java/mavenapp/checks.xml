@@ -10,7 +10,8 @@
 <module name="Checker">
 
     <module name="FileLength">
-        <property name="max" value="500" />
+        <!--<property name="max" value="500" />-->
+        <property name="max" value="50" />
     </module>
 
 
