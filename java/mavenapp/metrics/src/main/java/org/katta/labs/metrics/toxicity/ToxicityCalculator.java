@@ -15,9 +15,22 @@ public class ToxicityCalculator {
 
     public void calculate(String checkstyleFilePath) {
         Checkstyle checkstyle = loadCheckstyle(checkstyleFilePath);
-        Map<String, Map<String, Double>> value = checkstyle.getFiles().toxicValue();
+        Map<String, Map<String, Double>> value = checkstyle.getFiles(). calculateToxicValue();
+
+        System.out.println(summary(value));
         System.out.println(toCsv(value));
 
+    }
+
+    private String summary(Map<String, Map<String, Double>> toxicValues) {
+        Checks allChecks = Checks.all();
+        for (Map<String, Double> values : toxicValues.values()) {
+            for (String checkName : values.keySet()) {
+                allChecks.find(checkName).addToxicValue(values.get(checkName));
+            }
+        }
+
+        return allChecks.toString();
     }
 
     private String toCsv(Map<String, Map<String, Double>> toxicValues) {

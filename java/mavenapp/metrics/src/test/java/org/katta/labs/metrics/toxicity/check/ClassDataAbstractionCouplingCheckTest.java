@@ -20,7 +20,7 @@ public class ClassDataAbstractionCouplingCheckTest {
         file.addError(error);
 
         //when
-        double value = check.toxicValue(file);
+        double value = check.calculateToxicValue(file);
 
         //then
         Assert.assertEquals(1.1, value, 0.0);

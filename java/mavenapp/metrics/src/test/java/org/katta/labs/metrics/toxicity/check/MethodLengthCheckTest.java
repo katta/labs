@@ -22,7 +22,7 @@ public class MethodLengthCheckTest {
         file.addError(checkstyleError);
 
         //when
-        double toxicValue = check.toxicValue(file);
+        double toxicValue = check.calculateToxicValue(file);
 
         //then
         Assert.assertEquals(1.2, toxicValue, 0.0);

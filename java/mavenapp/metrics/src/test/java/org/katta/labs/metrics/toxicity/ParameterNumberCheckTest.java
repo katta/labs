@@ -28,7 +28,7 @@ public class ParameterNumberCheckTest{
         file.addError(error);
 
         //when
-        double toxicValue = check.toxicValue(file);
+        double toxicValue = check.calculateToxicValue(file);
 
         //then
         Assert.assertEquals(1.0, toxicValue, 0.0);
@@ -46,7 +46,7 @@ public class ParameterNumberCheckTest{
         file.addError(error);
 
         //when
-        double toxicValue = check.toxicValue(file);
+        double toxicValue = check.calculateToxicValue(file);
 
         //then
         Assert.assertEquals(0.0, toxicValue, 0.0);

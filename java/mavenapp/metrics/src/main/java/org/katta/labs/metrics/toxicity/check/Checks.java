@@ -31,11 +31,11 @@ public class Checks extends ArrayList<Check> {
                 new BooleanExpressionComplexityCheck());
     }
 
-    public HashMap<String, Double> toxicValue(CheckstyleFile checkstyleFile) {
+    public HashMap<String, Double> calculateToxicValue(CheckstyleFile checkstyleFile) {
         HashMap<String, Double> checkValues = new HashMap<String, Double>();
 
         for (Check check : this) {
-            checkValues.put(check.getName(), check.toxicValue(checkstyleFile));
+            checkValues.put(check.getName(), check.calculateToxicValue(checkstyleFile));
         }
         return checkValues;
     }
@@ -51,5 +51,21 @@ public class Checks extends ArrayList<Check> {
 
     public String toCSV() {
         return StringUtil.join(",", names());
+    }
+
+    public Check find(String checkName) {
+        for (Check check : this) {
+            if(check.getName().equals(checkName)) return check;
+        }
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder();
+        for (Check check : this) {
+            builder.append(check.toString()).append("\n");
+        }
+        return builder.toString();
     }
 }

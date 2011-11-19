@@ -15,7 +15,7 @@ public class ClassDataAbstractionCouplingCheck extends Check {
     }
 
     @Override
-    public double toxicValue(CheckstyleFile file) {
+    public double calculateToxicValue(CheckstyleFile file) {
         CheckstyleErrors errors = errorsOfThisType(file);
 
         double value = 0.0;

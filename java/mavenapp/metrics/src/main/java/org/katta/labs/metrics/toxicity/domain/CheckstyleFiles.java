@@ -8,11 +8,11 @@ import java.util.Map;
 
 public class CheckstyleFiles extends ArrayList<CheckstyleFile> {
 
-    public Map<String, Map<String, Double>> toxicValue() {
+    public Map<String, Map<String, Double>> calculateToxicValue() {
         Map<String, Map<String, Double>> toxicValues = new HashMap<String, Map<String, Double>>();
 
         for (CheckstyleFile checkstyleFile : this) {
-            toxicValues.put(checkstyleFile.getName(), Checks.all().toxicValue(checkstyleFile));
+            toxicValues.put(checkstyleFile.getName(), Checks.all().calculateToxicValue(checkstyleFile));
         }
         return toxicValues;
     }

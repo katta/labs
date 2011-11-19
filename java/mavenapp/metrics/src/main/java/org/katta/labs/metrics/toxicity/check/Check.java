@@ -9,7 +9,9 @@ import java.util.Map;
 
 public abstract class Check {
 
-    public double toxicValue(CheckstyleFile file) {
+    private double toxicValue = 0.0;
+
+    public double calculateToxicValue(CheckstyleFile file) {
         CheckstyleErrors errors = errorsOfThisType(file);
 
         double value = 0.0;
@@ -30,5 +32,24 @@ public abstract class Check {
 
     protected CheckstyleErrors errorsOfThisType(CheckstyleFile file) {
         return file.errorsOfType(this.getClass().getSimpleName());
+    }
+
+    @Override
+    public int hashCode() {
+        return getName().hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return getName().equals(((Check) o).getName());
+    }
+
+    public void addToxicValue(double toxicValue) {
+        this.toxicValue += toxicValue;
+    }
+
+    @Override
+    public String toString() {
+        return this.getName() + "=" + toxicValue;
     }
 }

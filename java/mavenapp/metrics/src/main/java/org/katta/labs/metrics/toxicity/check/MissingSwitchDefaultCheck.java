@@ -5,13 +5,13 @@ import org.katta.labs.metrics.toxicity.domain.CheckstyleFile;
 public class MissingSwitchDefaultCheck extends Check {
 
     @Override
-    public double toxicValue(CheckstyleFile file) {
+    public double calculateToxicValue(CheckstyleFile file) {
         return errorsOfThisType(file).size();
     }
 
     @Override
     protected String getErrorFormat() {
-        throw new RuntimeException("This check should override toxicValue().");
+        throw new RuntimeException("This check should override calculateToxicValue().");
     }
 
 }
