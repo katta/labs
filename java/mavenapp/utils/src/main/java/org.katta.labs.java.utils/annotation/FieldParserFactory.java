@@ -8,6 +8,7 @@ public class FieldParserFactory {
 
     private static List<FieldParser> fieldParsers = new ArrayList<FieldParser>() {{
         add(new SimpleFieldParser());
+        add(new NestedObjectFieldParser());
     }};
 
     public static FieldParser fieldParser(Field field) {

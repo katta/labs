@@ -1,7 +1,10 @@
 package org.katta.labs.java.utils.annotation;
 
+@AttributeClass
 class CustomObject {
+    @AttributeConfig(name = "C3")
     private long config3;
+    @AttributeConfig(name = "C4")
     private boolean config4;
 
     private int config5;
