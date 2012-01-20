@@ -7,6 +7,8 @@ public abstract class FieldParser {
     public abstract boolean canParse(Field field);
 
     public Attributes parse(Field field, Object object) throws IllegalAccessException {
+        if(object == null) return new Attributes();
+
         field.setAccessible(true);
         return doParse(field, object);
     }

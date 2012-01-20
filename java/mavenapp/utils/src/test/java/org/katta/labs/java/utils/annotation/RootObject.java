@@ -1,5 +1,8 @@
 package org.katta.labs.java.utils.annotation;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class RootObject {
 
     @AttributeConfig(name = "C1")
@@ -8,6 +11,8 @@ class RootObject {
     private String config2;
 
     private CustomObject customObject;
+
+    private List<ListObject> listObjects = new ArrayList<ListObject>();
 
 
     public int getConfig1() {
@@ -32,6 +37,10 @@ class RootObject {
 
     public void setCustomObject(CustomObject customObject) {
         this.customObject = customObject;
+    }
+
+    public void addListObject(ListObject listObject) {
+        this.listObjects.add(listObject);
     }
 }
 

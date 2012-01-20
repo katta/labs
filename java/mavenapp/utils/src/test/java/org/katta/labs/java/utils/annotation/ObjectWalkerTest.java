@@ -51,5 +51,16 @@ public class ObjectWalkerTest {
         assertThat(attributes, Matchers.hasItem(new Attribute("C3", "3")));
         assertThat(attributes, Matchers.hasItem(new Attribute("C4", "true")));
     }
+
+    @Test
+    public void shouldCollectAttributesFromFirstElementInList() throws IllegalAccessException {
+        RootObject rootObject = new RootObject();
+        rootObject.addListObject(new ListObject("list value"));
+
+        Attributes attributes = objectWalker.walk(rootObject);
+
+        assertThat(attributes, Matchers.<Object>notNullValue());
+        assertThat(attributes, Matchers.hasItem(new Attribute("L1", "list value")));
+    }
 }
 

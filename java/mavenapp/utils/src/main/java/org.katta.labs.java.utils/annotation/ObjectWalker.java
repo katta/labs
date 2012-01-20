@@ -8,6 +8,8 @@ public class ObjectWalker {
 
     public Attributes walk(Object object) throws IllegalAccessException {
         Attributes attributes = new Attributes();
+        if(object == null) return attributes;
+
         List<Field> declaredFields = getDeclaredFields(object);
 
         for (Field field : declaredFields) {
